@@ -33,6 +33,7 @@ For instance, here is options that DATUM support:
         "max_clients_per_thread": ........ Maximum clients per Stratum server thread (integer, default: 128)
         "max_threads": ................... Maximum Stratum server threads (integer, default: 8)
         "max_clients": ................... Maximum total Stratum clients before rejecting connections (integer, default: 1024)
+        "trust_proxy": ................... Enable support for the PROXY protocol, trusting up to the specified number of levels deep of proxies (-1 to disable entirely) (integer, default: -1)
         "vardiff_min": ................... Work difficulty floor (integer, default: 16384)
         "vardiff_target_shares_min": ..... Adjust work difficulty to target this many shares per minute (integer, default: 8)
         "vardiff_quickdiff_count": ....... How many shares before considering a quick diff update (integer, default: 8)
@@ -42,6 +43,7 @@ For instance, here is options that DATUM support:
         "idle_timeout_no_subscribe": ..... Seconds we allow a connection to be idle without seeing a work subscription? (0 disables) (integer, default: 15)
         "idle_timeout_no_shares": ........ Seconds we allow a subscribed connection to be idle without seeing at least one accepted share? (0 disables) (integer, default: 7200)
         "idle_timeout_max_last_work": .... Seconds we allow a subscribed connection to be idle since its last accepted share? (0 disables) (integer, default: 0)
+        "username_modifiers": ............ Modifiers to redirect some portion of shares to alternate usernames ({"modname":{"address":proportion,...},...})
     },
     "mining": {
         "pool_address": .................. Bitcoin address used for mining rewards. (string, REQUIRED)
